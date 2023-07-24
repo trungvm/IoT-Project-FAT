@@ -1,6 +1,6 @@
-#define BLYNK_TEMPLATE_ID "TMPL6DKuhxuzw"
-#define BLYNK_TEMPLATE_NAME "PhungTrinh"
-#define BLYNK_AUTH_TOKEN "3oNk9uP3zr0VLvrfRqyS8-V9Mqml_x6l"
+// #define BLYNK_TEMPLATE_ID "TMPL6DKuhxuzw"
+// #define BLYNK_TEMPLATE_NAME "PhungTrinh"
+// #define BLYNK_AUTH_TOKEN "3oNk9uP3zr0VLvrfRqyS8-V9Mqml_x6l"
 
 #include <WiFi.h>
 #include <WiFiClient.h>
@@ -10,9 +10,9 @@
 #include "DHT.h"
 
 // Blynk configuration
-char auth[] = BLYNK_AUTH_TOKEN;
-char ssid[] = "Fatlab";
-char pass[] = "12345678@!";
+// char auth[] = BLYNK_AUTH_TOKEN;
+// char ssid[] = "Fatlab";
+// char pass[] = "12345678@!";
 
 // DHT configuration
 #define DHTTYPE DHT22   // DHT 22
@@ -63,14 +63,14 @@ void loop()
         Serial.print("CO2 concentration: ");
         Serial.print(CO2);
         Serial.println("ppm");
-        Blynk.virtualWrite(V2, CO2); // Send CO2 data to Virtual Pin V2 in Blynk app
+        // Blynk.virtualWrite(V2, CO2); // Send CO2 data to Virtual Pin V2 in Blynk app
       }
     }
   }
 
-  // Send temperature, humidity, and CO2 data to Virtual Pins V0, V1, and V2 in Blynk app
-  Blynk.virtualWrite(V0, t);
-  Blynk.virtualWrite(V1, h);
+  // // Send temperature, humidity, and CO2 data to Virtual Pins V0, V1, and V2 in Blynk app
+  // Blynk.virtualWrite(V0, t);
+  // Blynk.virtualWrite(V1, h);
   
   Serial.print("\n");
   Serial.print("Humidity: " + String(h) + "%");
