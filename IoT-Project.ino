@@ -60,9 +60,7 @@ void loop()
         lo = ch;
       } else if (i == 8) {
         CO2 = hi * 256 + lo;
-        Serial.print("CO2 concentration: ");
-        Serial.print(CO2);
-        Serial.println("ppm");
+
         // Blynk.virtualWrite(V2, CO2); // Send CO2 data to Virtual Pin V2 in Blynk app
       }
     }
@@ -71,10 +69,12 @@ void loop()
   // // Send temperature, humidity, and CO2 data to Virtual Pins V0, V1, and V2 in Blynk app
   // Blynk.virtualWrite(V0, t);
   // Blynk.virtualWrite(V1, h);
-  
-  Serial.print("\n");
+  Serial.print("CO2 concentration: ");
+  Serial.print(CO2);
+  Serial.print("ppm");
+  Serial.print(";\t");
   Serial.print("Humidity: " + String(h) + "%");
-  Serial.print("\t");
-  Serial.print("Temperature:" + String(t) + " C");
+  Serial.print(";\t");
+  Serial.println("Temperature:" + String(t) + " C");
   delay(2000);
 }
